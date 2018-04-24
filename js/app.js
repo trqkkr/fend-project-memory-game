@@ -1,7 +1,6 @@
-/*
- * Create a list that holds all of your cards
- */
-
+//cards array
+let card = document.querySelectorAll('.card');
+let cards = [...card];
 
 /*
  * Display the cards on the page
