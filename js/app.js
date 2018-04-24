@@ -10,7 +10,15 @@ for (var i = 0; i < cards.length; i++){
      this.classList.toggle('show');
    });
 };
-
+//shuffle cards function using Fisher-Yates shuffle
+function shuffleCards(){
+   let shuffledCards = shuffle(cards);
+   for (let i= 0; i < shuffledCards.length; i++){
+      [].forEach.call(shuffledCards, function(item){
+         deck.appendChild(item);
+      });
+   }
+}
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
