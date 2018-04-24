@@ -1,12 +1,13 @@
+//initialize variables
+const deck = document.querySelector('.deck');
 //cards array
 let card = document.querySelectorAll('.card');
 let cards = [...card];
 //for loop to display cards
 for (var i = 0; i < cards.length; i++){
-   cards[i].addEventListener("click", function () {
-     this.classList.toggle("open");
-     this.classList.toggle("show");
-     this.classList.toggle("disabled");
+   cards[i].addEventListener('click', function () {
+     this.classList.toggle('open');
+     this.classList.toggle('show');
    });
 };
 
