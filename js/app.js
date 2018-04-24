@@ -1,13 +1,15 @@
 //cards array
 let card = document.querySelectorAll('.card');
 let cards = [...card];
+//for loop to display cards
+for (var i = 0; i < cards.length; i++){
+   cards[i].addEventListener("click", function () {
+     this.classList.toggle("open");
+     this.classList.toggle("show");
+     this.classList.toggle("disabled");
+   });
+};
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
