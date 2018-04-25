@@ -1,7 +1,7 @@
 //initialize variables
 const deck = document.querySelector('.deck');
-//cards array
 let card = document.querySelectorAll('.card');
+//cards array
 let cards = [...card];
 //for loop to display cards
 for (var i = 0; i < cards.length; i++){
