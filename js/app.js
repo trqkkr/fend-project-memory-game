@@ -10,15 +10,12 @@ for (var i = 0; i < cards.length; i++){
      this.classList.toggle('show');
    });
 };
-//shuffle cards function using Fisher-Yates shuffle
-function shuffleCards(){
-   let shuffledCards = shuffle(cards);
-   for (let i= 0; i < shuffledCards.length; i++){
-      Array.prototype.forEach.call(shuffledCards, function(item){
-         deck.appendChild(item);
-      });
-   }
-}
+//add the cards that have now been shuffled to the variable shuffledCards
+let shuffledCards = shuffle(cards);
+//maps the shuffledCards array to the deck class
+shuffledCards.map(item => {
+    deck.appendChild(item);
+})
 //function to shuffle cards once page loads
 function startGame() {
 window.onload = shuffleCards();
