@@ -16,11 +16,6 @@ let shuffledCards = shuffle(cards);
 shuffledCards.map(item => {
     deck.appendChild(item);
 })
-//function to shuffle cards once page loads
-function startGame() {
-window.onload = shuffleCards();
-}
-startGame();
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
