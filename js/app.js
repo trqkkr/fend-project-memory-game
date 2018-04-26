@@ -10,7 +10,7 @@ for (var i = 0; i < cards.length; i++){
      this.classList.toggle('show');
    });
 };
-//add the cards that have now been shuffled to the variable shuffledCards
+//add the cards array that has now been shuffled to the variable shuffledCards
 let shuffledCards = shuffle(cards);
 //maps the shuffledCards array to the deck class
 shuffledCards.map(item => {
@@ -28,6 +28,15 @@ function shuffle(array) {
     }
     return array;
 }
+//Function to add open cards to list
+function selected () {
+	let selected = [];
+  if (document.querySelectorAll('.open')) {
+      selected.push((document.querySelectorAll('.open')));
+  }
+	return selected;
+}
+
 
 
 /*
