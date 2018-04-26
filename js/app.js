@@ -10,12 +10,6 @@ for (var i = 0; i < cards.length; i++){
      this.classList.toggle('show');
    });
 };
-//add the cards array that has now been shuffled to the variable shuffledCards
-let shuffledCards = shuffle(cards);
-//maps the shuffledCards array to the deck class
-shuffledCards.map(item => {
-    deck.appendChild(item);
-})
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -28,14 +22,17 @@ function shuffle(array) {
     }
     return array;
 }
-//Function to add open cards to list
-function selected () {
-	let selected = [];
-  if (document.querySelectorAll('.open')) {
-      selected.push((document.querySelectorAll('.open')));
-  }
-	return selected;
+//add the cards array that has now been shuffled to the variable shuffledCards
+let shuffledCards = shuffle(cards);
+//maps the shuffledCards array to the deck class
+shuffledCards.map(item => {
+    deck.appendChild(item);
+})
+//start game function
+function startGame() {
+    window.onload = startGame();
 }
+//Function to add open cards to list
 
 
 
